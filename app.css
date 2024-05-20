@@ -43,13 +43,11 @@
 overflow: hidden;
 }
 .card_show:nth-child(2n + 1){
-
  right: 0;
  transform: rotateY(-3deg);
  transform-origin: right;
 }
 .card_show:nth-child(2n){
-
     left: 0;
     transform: rotateY(3deg);
     transform-origin: left;
@@ -61,21 +59,50 @@ overflow: hidden;
   
 }
 .card_show:nth-child(2){
-    top: calc(1 * 210px);
+    top: calc(0 * 210px);
     background-color: var(--card-show-bg-color);
   
 }
 .card_show:nth-child(3){
-    top: calc(2 * 210px);
+    top: calc(1 * 210px);
     background-color: var(--card-show-bg-color);
   
 }
 .card_show:nth-child(4){
+    top: calc(1 * 210px);
+    background-color: var(--card-show-bg-color);
+
+
+}
+.card_show:nth-child(5){
+    top: calc(2 * 210px);
+    background-color: var(--card-show-bg-color);
+
+
+}
+.card_show:nth-child(6){
+    top: calc(2 * 210px);
+    background-color: var(--card-show-bg-color);
+
+
+}
+.card_show:nth-child(7){
     top: calc(3 * 210px);
     background-color: var(--card-show-bg-color);
 
 
 }
+.card_show:nth-child(8){
+    top: calc(3 * 210px);
+    background-color: var(--card-show-bg-color);
+
+
+}
+
+
+
+
+
 
 .card_show{
     width: 300px;
@@ -91,8 +118,8 @@ overflow: hidden;
     justify-content: center;
     align-items:center;
     gap:10px;
-    transform:translateY(calc(var(--scroll) * -1%));
     transition: linear 1s ;
+    transform: translateY(0);
 }
 .scroller_image{
     width: 100%;
