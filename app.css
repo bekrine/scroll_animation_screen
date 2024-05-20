@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+ box-sizing: border-box;   
+ scroll-behavior: smooth;
+}
+:root{
+    --card-show-bg-color:#000;
+    --scroll:0;
+}
+
+.parent{
+    height: 300vh;
+    width: 100%;
+ 
+}
+
+
+.warpper{
+    width: 100%;
+    height: 100dvh;
+    position: sticky;
+    border: 1px solid red;
+    top: 10px;
+}
+
+.tunnel{
+    width: 2%;
+    height: 100%;
+    margin: 10px auto;
+    perspective: 100px;
+    transform-style: preserve-3d;
+    position: relative;
+    perspective-origin: bottom right;
+    background-image: url('./images/bg_Flag_Pole.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.tunnel > div {
+ position: absolute;
+overflow: hidden;
+}
+.card_show:nth-child(2n + 1){
+
+ right: 0;
+ transform: rotateY(-3deg);
+ transform-origin: right;
+}
+.card_show:nth-child(2n){
+
+    left: 0;
+    transform: rotateY(3deg);
+    transform-origin: left;
+}
+
+.card_show:nth-child(1){
+    top: calc(0 * 210px );
+    background-color: var(--card-show-bg-color);
+  
+}
+.card_show:nth-child(2){
+    top: calc(1 * 210px);
+    background-color: var(--card-show-bg-color);
+  
+}
+.card_show:nth-child(3){
+    top: calc(2 * 210px);
+    background-color: var(--card-show-bg-color);
+  
+}
+.card_show:nth-child(4){
+    top: calc(3 * 210px);
+    background-color: var(--card-show-bg-color);
+
+
+}
+
+.card_show{
+    width: 300px;
+    height: calc(100% / 4);
+  
+}
+
+
+.scroller_warpper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap:10px;
+    transform:translateY(calc(var(--scroll) * -1%));
+    transition: linear 1s ;
+}
+.scroller_image{
+    width: 100%;
+    height: 205px;
+    >img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+        animation: image_animation linear;
+        animation-timeline: view(cover);
+    }
+}
+
